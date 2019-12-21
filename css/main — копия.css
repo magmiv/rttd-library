@@ -1,0 +1,157 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Bravo;
+  src: url("../fonts/BravoSC.otf"); }
+
+@font-face {
+  font-family: Font1;
+  src: url("../fonts/font1.ttf"); }
+
+/*При 700 пикселях мобильная версия*/
+body {
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto; }
+
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px 0;
+  margin-top: 5px; }
+  @media (max-width: 750px) {
+    .header {
+      height: 100px;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .header input {
+        top: 35px;
+        height: 33px !important;
+        width: 155px !important;
+        left: 0 !important;
+        font-size: 22px !important; }
+      .header img {
+        height: 24px !important;
+        margin-left: -88px !important; } }
+  .header img {
+    height: 22px;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px; }
+  .header input {
+    height: 29px;
+    width: 135px;
+    position: relative;
+    left: -50px;
+    margin-top: -4px;
+    padding-left: 35px;
+    padding-right: 10px;
+    color: #fff;
+    background: url("../imgs/lupa.png") no-repeat 8px 5px;
+    -webkit-background-size: 13% 13%;
+            background-size: 13%;
+    font-size: 20px;
+    font-family: Bravo;
+    background-color: #2B2B2B;
+    border: none;
+    -webkit-border-radius: 90px;
+            border-radius: 90px; }
+
+.group_name {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #2B2B2B;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: Font1;
+  margin-left: 78px; }
+  @media (max-width: 750px) {
+    .group_name {
+      margin-left: 5vw;
+      font-size: 6vw; } }
+
+.book_group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 0px; }
+  .book_group .arrow_wrap {
+    width: 400px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer; }
+    .book_group .arrow_wrap .arrow {
+      position: relative;
+      margin-top: -65px;
+      width: 30px;
+      height: 30px;
+      border-top: 5px solid #AEAEAE;
+      border-left: 5px solid #AEAEAE; }
+  .book_group .back .arrow {
+    left: 30px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .book_group .next .arrow {
+    left: -5px;
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg); }
+  .book_group .slider {
+    padding: 5px 5px 0 5px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    /*При изменении размеров может понадобиться редактирование переменной slidesWidth в index.js*/ }
+    .book_group .slider .book {
+      margin: 0 15px; }
+      @media (max-width: 750px) {
+        .book_group .slider .book:first-child {
+          margin-left: -15vw; }
+        .book_group .slider .book p, .book_group .slider .book a {
+          font-size: 5.5vw !important; } }
+      .book_group .slider .book p, .book_group .slider .book a {
+        margin-left: 1px;
+        margin-top: 4px;
+        color: #404040;
+        font-family: Bravo;
+        font-size: 2.7vw;
+        white-space: nowrap;
+        text-decoration: none; }
+        @media (min-width: 900px) {
+          .book_group .slider .book p, .book_group .slider .book a {
+            font-size: 27px; } }
+      .book_group .slider .book img {
+        width: 100%;
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
